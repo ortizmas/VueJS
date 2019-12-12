@@ -1,0 +1,8 @@
+{
+    "liveServer.settings.useWebExt": true,
+    "liveServer.setting.proxy": {
+        "enable": true,
+        "baseUri": "/",
+        "proxyUri": "http://localhost:9090"
+    }
+}
