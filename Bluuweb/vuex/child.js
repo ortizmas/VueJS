@@ -3,8 +3,10 @@ Vue.component('child', {
     `
         <div class="p-3 bg-warning text-dark">
             <h1>{{titleChild}}</h1>
-            <h3>Recebe do pai: {{number}}</h3>
-            <h4>Nombre: {{nombre}}</h4>
+            <h3>Numero: {{$store.state.count}}</h3>
+            <button class="btn btn-success" @click="$store.commit('increment')">
+                    +
+            </button>
         </div>
     `,
     props: ['number'],

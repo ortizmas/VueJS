@@ -7,14 +7,15 @@ Vue.component('parent_component', {
 
             <button class="btn btn-success" @click="numberParent++">+</button>
             <hr>
-
-            <child :number="numberParent"></child>
+            {{nameParent}}
+            <child :number="numberParent" @nameChild="nameParent = $event"></child>
         </div>
     `,
     data() {
         return {
             titleParent: 'Componente Pai',
-            numberParent: 0
+            numberParent: 0,
+            nameParent: ''
         }
     }
 });
