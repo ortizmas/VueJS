@@ -1,28 +1,15 @@
 <template>
   <div id="app">
-    
-    <Cabecera></Cabecera>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> | 
+      <router-link to="/project">Projeto</router-link>
+    </div>
+    <!--Se carrega todo as rutas aqui-->
+    <router-view/>
 
-    <Lista></Lista>
-    
   </div>
 </template>
-
-<script>
-
-import Cabecera from './components/Cabecera.vue'
-import Lista from './components/Lista.vue'
-
-
-
-export default {
-  name: 'app',
-  components: {
-    Cabecera,
-    Lista
-  }
-}
-</script>
 
 <style>
 #app {
@@ -31,6 +18,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>

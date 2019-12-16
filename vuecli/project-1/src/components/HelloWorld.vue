@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1 class="title">{{ msg }}</h1>
     
   </div>
 </template>
@@ -18,6 +18,9 @@ export default {
 <style scoped>
 h3 {
   margin: 40px 0 0;
+}
+.title{
+  color:burlywood;
 }
 ul {
   list-style-type: none;
